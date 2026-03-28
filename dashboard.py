@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
-import food  
+import food 
+import read
 
 root = tk.Tk()
 root.title("Dashboard")
@@ -15,7 +16,7 @@ def open_dashboard():
     def gym():
         messagebox.showinfo("gym","Gym clicked")
     def reading():
-        messagebox.showinfo("reading","Reading clicked")
+    read.open_reading(root)   
     def eating():
         messagebox.showinfo("eating","Eating clicked")
     def sleeping():
