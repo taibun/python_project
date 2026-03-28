@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
-import food 
+import food  
+import gym
 import read
 
 root = tk.Tk()
@@ -13,10 +14,10 @@ title.place(x=130, y=30)
 def open_dashboard():
     def open_food_page():
         food.open_food(root)
-    def gym():
-        messagebox.showinfo("gym","Gym clicked")
-    def reading():
-    read.open_reading(root)   
+    def open_gym_page():
+        gym.open_gym(root)
+    def open_reading_page():
+        read.open_reading(root)
     def eating():
         messagebox.showinfo("eating","Eating clicked")
     def sleeping():
@@ -25,9 +26,9 @@ def open_dashboard():
     btn1 = tk.Button(root, text="Food", width=15, command=open_food_page)
     btn1.place(x=140, y=100)
     
-    btn2 = tk.Button(root, text="Gym", width=15, command=gym)
+    btn2 = tk.Button(root, text="Gym", width=15, command=open_gym_page)
     btn2.place(x=140, y=140)
-    btn3 = tk.Button(root, text="Reading", width=15, command=reading)
+    btn3 = tk.Button(root, text="Reading", width=15, command=open_reading_page)
     btn3.place(x=140, y=180)
     btn4 = tk.Button(root, text="Eating", width=15, command=eating)
     btn4.place(x=140, y=220)
